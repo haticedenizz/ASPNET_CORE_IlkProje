@@ -1,0 +1,21 @@
+﻿@using ASPNET_CORE_IlkProje.Models
+@model (Kullanici k,Urun u)
+
+<h2>Merhaba Dünya</h2>
+@*<h1>@Model._adi</h1>
+    <h1>@Model._fiyat</h1>*@
+<h2>
+    @Model.k.Ad
+    @Model.u._adi
+</h2>
+ 
+<h1>
+   
+    @(((Urun)ViewBag.urun)._adi)
+</h1>
+
+<h1>
+    @(((Urun)ViewData["urun"])._adi)
+</h1>
+
+

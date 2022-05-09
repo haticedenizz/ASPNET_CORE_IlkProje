@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "VeriAl";
+}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<button id="btnGonder">Gönder</button>
+
+<script>
+    $("#btnGonder").click(function () {
+        $.post("https://localhost:44301/Urun/VeriAl", {sehir:"deneme"});
+    });
+</script>
+

@@ -1,0 +1,20 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *,ASPNET_CORE_IlkProje
+
+@*@Html.BeginForm("Index","Urun",FormMethod.Post)*@
+
+<form asp-action="Index" asp-controller="Urun" method="post">
+        @Html.TextBox("txtAd")
+        <input type="text" />
+    </form>
+@*<cache>
+    cache:@DateTime.Now
+</cache>
+@DateTime.Now*@
+
+<a href="mailto:cenelif@gmail.com">Email</a>
+<br />
+<mail mail="cenelif@gmail.com" display="Elif Cengiz"></mail>
+@*<email mail="cenelif@gmail.com" display="Elif Cengiz"></email>*@
+<br />
+<a asp-action="VeriAl" asp-controller="Urun" asp-route-sehir="istanbul" asp-route-id="5">Link</a>

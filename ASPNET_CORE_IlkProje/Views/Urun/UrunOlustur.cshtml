@@ -1,0 +1,16 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model (ASPNET_CORE_IlkProje.Models.Kullanici k, ASPNET_CORE_IlkProje.Models.Urun u)
+@*@model ASPNET_CORE_IlkProje.Models.Urun
+    @Html.TextBoxFor(x => x._adi, new { placeholder = "Ürün Adı" })
+    @Html.TextBoxFor(x => x._fiyat, new { placeholder = "Ürün Fiyatı" })*@
+<div asp-validation-summary="All">
+
+</div>
+<form asp-action="UrunOlustur" asp-controller="Urun" method="post">
+    <input type="text" asp-for="k.Ad" placeholder="Urun Adı" />
+    <span asp-validation-for="k.Ad"></span>
+
+    <input type="text" asp-for="u._adi" placeholder="Urun Adı" />
+    <span asp-validation-for="u._adi"></span>
+    <button>Ürün Ekle</button>
+</form>

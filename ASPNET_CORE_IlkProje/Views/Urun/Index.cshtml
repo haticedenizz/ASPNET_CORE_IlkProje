@@ -1,0 +1,17 @@
+﻿@using ASPNET_CORE_IlkProje.Models
+@using ASPNET_CORE_IlkProje.Extensions
+@model Urun
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Urun Index</h1>
+<hr />
+@Html.TextBox("txtAd",null,new {style= "background-color:green" })
+@Html.CustomTextBox("txtAdi",null)
+
+@Model._adi
+<hr />
+@*@Html.RenderPartial("~/Views/Partial/ListPartial.cshtml")*@
+@Html.Partial("~/Views/Partial/ListPartial.cshtml", new Kullanici())
+
